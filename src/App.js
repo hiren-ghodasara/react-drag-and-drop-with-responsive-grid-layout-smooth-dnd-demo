@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Container, Draggable } from "react-smooth-dnd";
 import { applyDrag, generateItems } from "./utils";
 import "./App.css";
-// const lorem = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-// Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+// const lorem = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+// Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 // Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`;
 const imgurl = [
   "https://i.pinimg.com/originals/6b/d2/6b/6bd26b4aac278ebdd359234c66716268.jpg",
@@ -11,7 +11,7 @@ const imgurl = [
   "https://i.ebayimg.com/images/g/ZXYAAOSwv0tVMTWR/s-l300.jpg",
   "https://assets.change.org/photos/5/ht/ow/JGHTOwZxrIWUKoC-800x450-noPad.jpg",
   "https://i.pinimg.com/originals/88/28/ed/8828ed3fd1c7ae68c0acb0c640040562.jpg",
-  "https://www.bemidjipioneer.com/sites/default/files/styles/16x9_620/public/fieldimages/2/1102/110216.n.dnt.oldgrowthforest1.jpg",
+  "https://www.bemidjipioneer.com/sites/default/files/styles/16x9_620/public/fieldimages/2/1102/110216.n.dnt.oldgrowthforest1.jpg"
 ];
 
 // const columnNames = ["", ""];
@@ -73,7 +73,9 @@ class Cards extends Component {
     return (
       <div className="card-scene">
         <nav className="navbar navbar-dark bg-dark text-center">
-          <span className="navbar-brand mb-0 h1 mx-auto">React Drag And Drop Demo Task</span>
+          <span className="navbar-brand mb-0 h1 mx-auto">
+            React Drag And Drop Demo Task
+          </span>
         </nav>
         <div className="row my-3 drag-main no-gutters">
           <Container
@@ -83,12 +85,18 @@ class Cards extends Component {
             dropPlaceholder={{
               animationDuration: 150,
               showOnTop: true,
-              className: 'cards-drop-preview'
+              className: "cards-drop-preview"
             }}
           >
             {this.state.scene.children.map((column, index) => {
               return (
-                <div className={index === 0 ? "col-lg-6 col-xs-12 pr-2 main-wrap drag-item" : "col-lg-6 col-xs-12 pr-2 main-wrap drop-item"}>
+                <div
+                  className={
+                    index === 0
+                      ? "col-lg-6 col-xs-12 pr-2 main-wrap drag-item"
+                      : "col-lg-6 col-xs-12 pr-2 main-wrap drop-item"
+                  }
+                >
                   <Draggable key={column.id}>
                     <div className={column.props.className}>
                       <div className="card-column-header">
@@ -112,11 +120,11 @@ class Cards extends Component {
                         onDragLeave={() => {
                           console.log("drag leave:", column.id);
                         }}
-                        onDropReady={p => console.log('Drop ready: ', p)}
+                        onDropReady={p => console.log("Drop ready: ", p)}
                         dropPlaceholder={{
                           animationDuration: 150,
                           showOnTop: true,
-                          className: 'drop-preview'
+                          className: "drop-preview"
                         }}
                         dropPlaceholderAnimationDuration={200}
                       >
@@ -124,7 +132,7 @@ class Cards extends Component {
                           return (
                             <Draggable key={card.id}>
                               <div {...card.props}>
-                              <img alt="sss" src={card.data} />
+                                <img alt="sss" src={card.data} />
                               </div>
                             </Draggable>
                           );
