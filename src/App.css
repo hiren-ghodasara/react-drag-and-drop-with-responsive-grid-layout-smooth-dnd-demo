@@ -1,0 +1,81 @@
+.smooth-dnd-container.horizontal{
+  display: flex;
+  width: 100%;
+  float: left;
+}
+.smooth-dnd-draggable-wrapper .card img{
+  width: 100px;
+  height: 100px;
+}
+.card-container .smooth-dnd-draggable-wrapper{
+  width: auto;
+  float: left;
+  padding: 5px;
+}
+.drop-item .card-container  .smooth-dnd-draggable-wrapper{
+  width: 25%;
+  float: left;
+  height: 170px;
+  border: none;
+}
+.drop-item .card-container  .smooth-dnd-draggable-wrapper .card{
+  background: transparent !important;
+  border: 0;
+  height: 100%;
+}
+.drop-item .card-container  .smooth-dnd-draggable-wrapper .card img{
+  width: 100% ;
+  height:100%;
+}
+.drop-item .card-container .smooth-dnd-container{
+  width: 100%;
+  float: left;
+  height: 100%;
+}
+.main-wrap{
+  height: 100%;
+
+}
+.main-wrap .smooth-dnd-draggable-wrapper{
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  float: left;
+  padding: 10px;
+  border: 2px solid #aed2f6;
+}
+.drag-item .smooth-dnd-draggable-wrapper .card{
+  width: auto;
+  float: left;
+}
+.drag-item .smooth-dnd-draggable-wrapper .card img{
+  width: 100%;
+  height: auto;
+}
+.drag-item .card-container {
+  width: 100%;
+  float: left;
+}
+.drag-item .card-container .smooth-dnd-container{
+  width: 100%;
+  float: left;
+}
+.drag-item .card-container .smooth-dnd-draggable-wrapper{
+  width: auto !important;
+  float: left;
+  border: none;
+}
+.drop-item .smooth-dnd-draggable-wrapper .card-container{
+  width: 100%;
+  float: left;
+  height: 100%;
+}
+.column-drag-handle{
+  display: none;
+}
+.navbar { 
+  background-color: #3399FF !important;
+}
+.smooth-dnd-drop-preview-constant-class{
+  background-color: #3399ff59 !important;
+}
